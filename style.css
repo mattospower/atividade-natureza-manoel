@@ -1,0 +1,283 @@
+/* Variáveis para padronizar cores */
+:root {
+    --verde-principal: #2E5C31;
+    --verde-hover: #458B49;
+    --texto-escuro: #2b2b2b;
+    --fundo-pagina: #f5f7f5;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fundo-pagina);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+/* ================================
+   1. Banner Interativo 
+================================ */
+.banner {
+    /* Imagem de fundo externa com sobreposição escura */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--branco);
+    
+    /* Flexbox do Banner */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+    min-height: 250px;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--verde-hover);
+}
+
+/* ================================
+   2. Layout Principal com Flexbox 
+================================ */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.wrapper-principal {
+    display: flex;
+    gap: 30px;
+}
+
+/* Main que vai agrupar Cards e Form */
+.main-content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Cards organizados com Flexbox */
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 250px;
+    border-left: 5px solid var(--verde-principal);
+}
+
+.card h3 {
+    color: var(--verde-principal);
+    margin-bottom: 15px;
+}
+
+/* ================================
+   Aside com Flexbox 
+================================ */
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.widget h3 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--verde-hover);
+    padding-bottom: 5px;
+}
+
+/* ================================
+   4. Formulário de Contato 
+================================ */
+.form-section {
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-section h2 {
+    color: var(--verde-principal);
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--verde-principal);
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.btn-enviar {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: var(--verde-hover);
+}
+
+/* ================================
+   3. Footer com Três Colunas 
+================================ */
+.footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 5%;
+    margin-top: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.footer-col h4 {
+    color: var(--verde-hover);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--verde-principal);
+}
+
+/* ================================
+   7. Media Query (Responsividade) 
+================================ */
+@media (max-width: 850px) {
+    /* Ajusta o banner */
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* O layout do main e aside quebra para empilhamento no mobile */
+    .wrapper-principal {
+        flex-direction: column;
+    }
+
+    /* Coloca as curiosidades em cima do formulário se desejar, ou mantém a ordem. */
+    .sidebar {
+        margin-bottom: 20px;
+    }
+
+    /* O footer empilha as 3 colunas */
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 30px 5%;
+    }
+    
+    .footer-col {
+        margin: 0;
+    }
+}
